@@ -3,7 +3,6 @@ use std::io;
 fn main() {
     let mut fibonacci: Vec<i128> = vec![0, 1, 1];
     
-    println!("{:?}", fibonacci);
     println!("Write a number of Fibonacci number you want to generate!");
 
     let mut input = String::new();
