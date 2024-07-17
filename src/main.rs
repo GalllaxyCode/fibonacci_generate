@@ -1,6 +1,7 @@
 use std::{io, num::Wrapping};
 use num_bigint::BigUint;
 use num_traits::One;
+use std::time::Instant;
  
 fn main() {
     println!("Write a number of Fibonacci number you want to generate!");
@@ -12,10 +13,15 @@ fn main() {
 
     let n = n.trim().parse().expect("Write a number!");
     
+    let now = Instant::now();
+
     let result = fib(n);
 
-    println!("The {n} number of fibonacci is: {result}")
-    
+    println!("The {n} number of fibonacci is: {result}");
+
+    let elapsed = now.elapsed();
+
+    println!("Elapsed: {:?}", elapsed);
     
     
     
